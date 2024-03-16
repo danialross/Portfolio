@@ -1,6 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
-import { COLORS } from "./contants";
 import { useState } from "react";
 
 function App() {
@@ -12,7 +11,7 @@ function App() {
 
   return (
     <div className="App">
-      <nav className={`bg-${COLORS.lightTone}`}>
+      <nav className="bg-lightTone">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <span className="text-stone-600 font-racing self-center text-4xl whitespace-nowra">
             Danial Ross
@@ -51,9 +50,7 @@ function App() {
           >
             <ul className="flex flex-col items-center font-medium mt-4 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
               <li>
-                <button
-                  className={`text-${COLORS.darkTone} border-2 border-${COLORS.darkTone} p-2 rounded-xl  hover:text-${COLORS.hoverDarkTone} hover:border-${COLORS.hoverDarkTone}`}
-                >
+                <button className="text-darkTone border-2 border-darkTone p-2 rounded-xl  hover:text-hoverDarkTone hover:border-hoverDarkTone">
                   <FontAwesomeIcon icon={faDownload} /> Download Resume
                 </button>
               </li>
