@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        racing: ['"Racing Sans One"', "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };
