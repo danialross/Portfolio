@@ -7,9 +7,9 @@ module.exports = {
         racing: ['"Racing Sans One"', "sans-serif"],
       },
       colors: {
-        darkTone: "#4a5568",
-        hoverDarkTone: "#a0aec0",
-        lightTone: "#edf2f7",
+        darkTone: "#57534e",
+        hoverDarkTone: "#a8a29e",
+        lightTone: "#e5e7eb",
       },
     },
   },
