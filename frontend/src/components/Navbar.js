@@ -13,7 +13,7 @@ function Navbar({ children }) {
     <>
       <nav className="bg-lightTone">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <span className="text-stone-600 font-racing self-center text-4xl whitespace-nowrap">
+          <span className="text-darkTone font-racing self-center text-4xl whitespace-nowrap">
             Danial Ross
           </span>
 
