@@ -1,8 +1,14 @@
 import NavBar from "./components/Navbar";
+import AboutMe from "./components/AboutMe";
+import Greetings from "./components/Greetings";
+
 function App() {
   return (
     <NavBar>
-      <div className="App">herlloe</div>;
+      <div className="bg-white">
+        <Greetings />
+        {/* <AboutMe /> */}
+      </div>
     </NavBar>
   );
 }
