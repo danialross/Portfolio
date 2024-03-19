@@ -5,10 +5,8 @@ import Greetings from "./components/Greetings";
 function App() {
   return (
     <NavBar>
-      <div className="bg-white">
-        <Greetings />
-        {/* <AboutMe /> */}
-      </div>
+      <Greetings />
+      <AboutMe />
     </NavBar>
   );
 }

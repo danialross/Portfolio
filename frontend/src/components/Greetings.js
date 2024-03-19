@@ -4,8 +4,8 @@ import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 function Greetings() {
   return (
-    <div className="flex flex-col-reverse items-center justify-center  md:flex-row font-racing text-darkTone max-w-screen-xl mx-auto p-8">
-      <div className="flex flex-col justify-center items-start p-8 gap-0 md:gap-2">
+    <div className="bg-white flex flex-col-reverse items-center justify-center  md:flex-row font-racing text-darkTone max-w-screen-xl mx-auto p-8">
+      <div className="flex flex-col justify-center items-center md:items-start p-8 gap-0 md:gap-2">
         <div className="text-3xl md:text-5xl">Hello, World!</div>
         <div className="text-2xl md:text-3xl text-midTone">
           I'm Danial Ross.
@@ -16,7 +16,7 @@ function Greetings() {
             href="https://github.com/danialross"
             target="_blank"
             rel="noopener noreferrer"
-            class="text-midTone border-midTone border-2 hover:bg-midTone hover:text-white font-medium rounded-xl text-md px-7 py-2.5 me-2 mb-2"
+            className="text-midTone border-midTone border-2 hover:bg-midTone hover:text-white font-medium rounded-xl text-md px-7 py-2.5 me-2 mb-2"
           >
             <FontAwesomeIcon size="2x" icon={faGithub} />
           </a>
