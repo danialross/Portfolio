@@ -11,8 +11,8 @@ function Navbar({ children }) {
 
   return (
     <>
-      <nav className="bg-lightTone">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <nav className="fixed w-full bg-lightTone border-b-2 border-darkTone">
+        <div className=" max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <span className="text-darkTone font-racing self-center text-4xl whitespace-nowrap">
             Danial Ross
           </span>
