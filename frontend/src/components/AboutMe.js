@@ -8,7 +8,7 @@ function AboutMe() {
           <img className="rounded-3xl" src={keyboard} alt="keyboard" />
         </div>
         <div>
-          <div className="flex justify-center md:justify-start text-3xl md:text-5xl p-8 md:px-8 md:pb-10 text-darkTone">
+          <div className="flex justify-center text-3xl md:text-5xl pt-8 pb-6 md:px-8 md:pb-8 md:pt-2 text-darkTone">
             About Me
           </div>
           <div className="text-midTone text-md md:text-xl md:px-8 leading-8 md:leading-10 indent-12 ">

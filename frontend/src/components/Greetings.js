@@ -11,7 +11,7 @@ function Greetings() {
           I'm Danial Ross.
         </div>
         <div className="text-3xl md:text-5xl">Web Developer.</div>
-        <div className="flex justify-center w-full p-4">
+        <div className="flex justify-center w-full p-8">
           <a
             href="https://github.com/danialross"
             target="_blank"
