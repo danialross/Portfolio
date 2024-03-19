@@ -1,25 +1,35 @@
 import avatar from "../assets/avatar.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
+
 function Greetings() {
   return (
     <div className="flex flex-col-reverse items-center justify-center  md:flex-row font-racing text-darkTone max-w-screen-xl mx-auto p-8">
       <div className="flex flex-col justify-center items-start p-8 gap-0 md:gap-2">
         <div className="text-3xl md:text-5xl">Hello, World!</div>
-        <div className="text-2xl md:text-3xl text-black">I'm Danial Ross.</div>
+        <div className="text-2xl md:text-3xl text-midTone">
+          I'm Danial Ross.
+        </div>
         <div className="text-3xl md:text-5xl">Web Developer.</div>
         <div className="flex justify-center w-full p-4">
-          <button
-            type="button"
-            class="text-white bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none"
+          <a
+            href="https://github.com/danialross"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-midTone border-midTone border-2 hover:bg-midTone hover:text-white font-medium rounded-xl text-md px-7 py-2.5 me-2 mb-2"
           >
-            first
-          </button>
+            <FontAwesomeIcon size="2x" icon={faGithub} />
+          </a>
+          <div className="w-2"></div>
           <div className="w-5"></div>
-          <button
-            type="button"
-            class="text-white bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none"
+          <a
+            href="https://www.linkedin.com/in/danial-ross-842579214/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-midTone border-midTone border-2 hover:bg-midTone hover:text-white font-medium rounded-xl text-md px-7 py-2.5 me-2 mb-2"
           >
-            first
-          </button>
+            <FontAwesomeIcon size="2x" icon={faLinkedinIn} />
+          </a>
         </div>
       </div>
       <div className="">

@@ -10,6 +10,7 @@ module.exports = {
         darkTone: "#57534e",
         hoverDarkTone: "#a8a29e",
         lightTone: "#e5e7eb",
+        midTone: "#1f2937",
       },
     },
   },
