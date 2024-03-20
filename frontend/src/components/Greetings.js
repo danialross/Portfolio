@@ -4,7 +4,7 @@ import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 function Greetings() {
   return (
-    <div className="bg-white flex flex-col-reverse items-center justify-center  md:flex-row font-racing text-darkTone max-w-screen-xl mx-auto pt-32 p-16 md:gap-16">
+    <div className="bg-white flex flex-col-reverse items-center justify-center  md:flex-row font-racing text-darkTone max-w-screen-xl mx-auto pt-36 pb-24 md:gap-16">
       <div className="flex flex-col justify-center items-center md:items-start p-8 gap-0 md:gap-2 text-nowrap">
         <div className="text-3xl md:text-5xl">Hello, World!</div>
         <div className="text-2xl md:text-3xl text-midTone">

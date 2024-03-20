@@ -22,7 +22,7 @@ function TechStack() {
   ];
 
   return (
-    <div className="bg-white">
+    <div className="bg-white py-16">
       <div className="flex justify-center text-darkTone text-5xl font-racing w-full p-10">
         Tech Stack
       </div>
