@@ -1,14 +1,14 @@
 import NavBar from "./components/Navbar";
 import AboutMe from "./components/AboutMe";
 import Greetings from "./components/Greetings";
-import Skills from "./components/Skills";
+import TechStack from "./components/TechStack";
 
 function App() {
   return (
     <NavBar>
       <Greetings />
       <AboutMe />
-      <Skills />
+      <TechStack />
     </NavBar>
   );
 }
