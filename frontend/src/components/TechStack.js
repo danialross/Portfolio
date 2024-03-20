@@ -7,6 +7,7 @@ import tailwind from "../assets/tailwind.svg";
 import mongodb from "../assets/mongodb.png";
 import express from "../assets/express.png";
 import mysql from "../assets/mysql.png";
+import rails from "../assets/rails.png";
 
 function TechStack() {
   const logos = [
@@ -19,17 +20,18 @@ function TechStack() {
     { name: "MongoDB", icon: mongodb },
     { name: "Express", icon: express },
     { name: "MySQL", icon: mysql },
+    { name: "Rails", icon: rails },
   ];
 
   return (
     <div className="bg-white py-16">
-      <div className="flex justify-center text-darkTone text-5xl font-racing w-full p-10">
+      <div className="flex justify-center text-darkTone text-5xl font-racing w-full p-10 pb-16">
         Tech Stack
       </div>
-      <div className="flex flex-wrap justify-evenly max-w-screen-lg mx-auto">
+      <div className="flex flex-wrap justify-evenly max-w-screen-xl mx-auto">
         {logos.map((item, index) => (
           <div key={index}>
-            <div className="flex flex-col items-center border-2 border-lightTone p-5 mb-5 mx-4 rounded-xl">
+            <div className="flex flex-col items-center border-2 border-lightTone p-5  mx-4 mb-16 rounded-xl">
               <div className="font-racing text-midTone text-xl pb-4 ">
                 {item.name}
               </div>
