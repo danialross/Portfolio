@@ -32,7 +32,7 @@ function TechStack() {
             <div className="flex flex-col items-center border-2 border-lightTone p-5 m-5 rounded-xl">
               <div className="font-racing text-midTone pb-4 ">{item.name}</div>
               <img
-                className="w-32 h-32 object-contain "
+                className="grayscale hover:grayscale-0 transition-all duration-300 w-32 h-32 object-contain "
                 src={item.icon}
                 alt={item.name}
               />
