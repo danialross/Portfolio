@@ -11,15 +11,15 @@ import mysql from "../assets/mysql.png";
 
 function Skills() {
   const logos = [
-    { name: "html", icon: html },
-    { name: "css", icon: css },
-    { name: "js", icon: js },
-    { name: "node", icon: nodeJs },
-    { name: "react", icon: react },
-    { name: "tailwind", icon: tailwind },
-    { name: "mongodb", icon: mongodb },
-    { name: "express", icon: express },
-    { name: "mysql", icon: mysql },
+    { name: "HTML", icon: html },
+    { name: "CSS", icon: css },
+    { name: "Javascript", icon: js },
+    { name: "Node.JS", icon: nodeJs },
+    { name: "React", icon: react },
+    { name: "TailwindCSS", icon: tailwind },
+    { name: "MongoDB", icon: mongodb },
+    { name: "Express", icon: express },
+    { name: "MySQL", icon: mysql },
   ];
 
   return (
@@ -29,16 +29,19 @@ function Skills() {
       </div>
       <div className="flex flex-wrap justify-evenly max-w-screen-sm mx-auto">
         {logos.map((item, index) => (
-          <div
-            key={index}
-            className="border-2 border-lightTone p-5 m-5 rounded-xl"
-          >
-            <img
-              className="w-16 h-16 object-contain "
-              src={item.icon}
-              alt={item.name}
-            />
-          </div>
+          <>
+            <div
+              key={index}
+              className="flex flex-col items-center border-2 border-lightTone p-5 m-5 rounded-xl"
+            >
+              <div className="font-racing text-midTone pb-4">{item.name}</div>
+              <img
+                className="w-16 h-16 object-contain "
+                src={item.icon}
+                alt={item.name}
+              />
+            </div>
+          </>
         ))}
       </div>
     </div>
