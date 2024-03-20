@@ -29,10 +29,12 @@ function TechStack() {
       <div className="flex flex-wrap justify-evenly max-w-screen-lg mx-auto">
         {logos.map((item, index) => (
           <div key={index}>
-            <div className="flex flex-col items-center border-2 border-lightTone p-5 m-5 rounded-xl">
-              <div className="font-racing text-midTone pb-4 ">{item.name}</div>
+            <div className="flex flex-col items-center border-2 border-lightTone p-5 mb-5 mx-4 rounded-xl">
+              <div className="font-racing text-midTone text-xl pb-4 ">
+                {item.name}
+              </div>
               <img
-                className="grayscale hover:grayscale-0 transition-all duration-300 w-32 h-32 object-contain "
+                className="grayscale hover:grayscale-0 transition-all duration-300 w-44 h-44 object-contain "
                 src={item.icon}
                 alt={item.name}
               />
