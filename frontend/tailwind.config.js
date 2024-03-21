@@ -11,6 +11,7 @@ module.exports = {
         hoverDarkTone: "#a8a29e",
         lightTone: "#e5e7eb",
         midTone: "#1f2937",
+        keyboardTone: "#ea580c",
       },
     },
   },
