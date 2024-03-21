@@ -32,7 +32,7 @@ function Greetings() {
           </a>
         </div>
       </div>
-      <div>
+      <div className="p-5">
         <img
           className="bg-lightTone rounded-full"
           src={avatar}

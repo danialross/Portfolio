@@ -4,9 +4,9 @@ function AboutMe() {
   return (
     <div className="bg-lightTone p-16">
       <div className="flex flex-col items-center lg:flex-row font-racing p-8 lg:gap-8 max-w-screen-xl mx-auto">
-        <div className="max-w-md">
+        <div className="flex-shrink-0">
           <img
-            className="rounded-3xl object-cover"
+            className=" w-96 h-auto rounded-3xl object-cover"
             src={keyboard}
             alt="keyboard"
           />
@@ -15,7 +15,7 @@ function AboutMe() {
           <div className="flex justify-center text-3xl lg:text-5xl pt-8 pb-6 lg:px-8 md:pb-8 lg:pt-2 text-darkTone">
             About Me
           </div>
-          <div className="text-midTone text-md sm:text-xl sm:px-8 leading-8 sm:leading-10 indent-12">
+          <div className="w-screen lg:w-auto text-midTone text-md sm:text-xl sm:px-8 leading-8 sm:leading-10 indent-12 px-10">
             I'm a recent
             <span className="text-keyboardTone"> Computer Science </span>
             graduate from
