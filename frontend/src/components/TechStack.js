@@ -36,7 +36,7 @@ function TechStack() {
                 {item.name}
               </div>
               <img
-                className="grayscale hover:grayscale-0 transition-all duration-300 w-44 h-44 object-contain "
+                className="grayscale hover:grayscale-0 hover:w-56 hover:h-56 transition-all duration-300 w-44 h-44 object-contain "
                 src={item.icon}
                 alt={item.name}
               />
