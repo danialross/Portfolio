@@ -48,8 +48,10 @@ function Navbar({ children }) {
             } w-full md:block md:w-auto`}
             id="navbar-solid-bg"
           >
-            <ul className="flex flex-col items-center font-medium mt-4 rounded-lg bg-lightTone md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
-              <li>
+            <ul className="font-medium mt-4 rounded-lg bg-lightTone md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+              <li className="flex flex-col items-center md:flex-row gap-5">
+                <button className="px-10">About Me</button>
+
                 <button className="text-darkTone border-2 border-darkTone p-2 rounded-xl  hover:text-hoverDarkTone hover:border-hoverDarkTone">
                   <FontAwesomeIcon icon={faDownload} /> Download Resume
                 </button>
