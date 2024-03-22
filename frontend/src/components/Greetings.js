@@ -16,7 +16,7 @@ function Greetings() {
             href="https://github.com/danialross"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-midTone border-midTone border-2 hover:bg-midTone hover:text-white font-medium rounded-xl text-md px-7 py-2.5 me-2 mb-2"
+            className="text-darkTone border-darkTone border-2 hover:bg-darkTone hover:text-white font-medium rounded-xl text-md px-7 py-2.5 me-2 mb-2"
           >
             <FontAwesomeIcon size="2x" icon={faGithub} />
           </a>
@@ -26,7 +26,7 @@ function Greetings() {
             href="https://www.linkedin.com/in/danial-ross-842579214/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-midTone border-midTone border-2 hover:bg-midTone hover:text-white font-medium rounded-xl text-md px-7 py-2.5 me-2 mb-2"
+            className="text-darkTone border-darkTone border-2 hover:bg-darkTone hover:text-white font-medium rounded-xl text-md px-7 py-2.5 me-2 mb-2"
           >
             <FontAwesomeIcon size="2x" icon={faLinkedinIn} />
           </a>

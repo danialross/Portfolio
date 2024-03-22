@@ -13,6 +13,19 @@ module.exports = {
         midTone: "#1f2937",
         keyboardTone: "#eb6304",
       },
+      spacing: {
+        padY: "32px",
+      },
+      keyframes: {
+        spin: {
+          "0%": { transform: "rotate(0deg)" },
+          "50%": { transform: "rotate(90deg)" },
+          "100%": { transform: "rotate(0deg)" },
+        },
+      },
+      animation: {
+        shake: "spin 0.3s ease-out infinite",
+      },
     },
   },
   plugins: [],
