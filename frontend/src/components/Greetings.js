@@ -3,12 +3,19 @@ import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
 import Link from "./Link";
 
 function Greetings() {
+  const buttonHeight = 16;
   const buttonsData = [
-    { link: "https://github.com/danialross", size: "2x", icon: faGithub },
+    {
+      link: "https://github.com/danialross",
+      size: "2x",
+      icon: faGithub,
+      height: buttonHeight,
+    },
     {
       link: "https://www.linkedin.com/in/danial-ross-842579214/",
       size: "2x",
       icon: faLinkedinIn,
+      height: buttonHeight,
     },
   ];
   return (
@@ -27,6 +34,7 @@ function Greetings() {
                 size={item.size}
                 icon={item.icon}
                 key={index}
+                height={item.height}
               />
             );
           })}
