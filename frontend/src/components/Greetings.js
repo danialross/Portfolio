@@ -1,8 +1,16 @@
 import avatar from "../assets/avatar.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
+import ButtonWithLink from "./ButtonWithLink";
 
 function Greetings() {
+  const buttonsData = [
+    { link: "https://github.com/danialross", size: "2x", icon: faGithub },
+    {
+      link: "https://www.linkedin.com/in/danial-ross-842579214/",
+      size: "2x",
+      icon: faLinkedinIn,
+    },
+  ];
   return (
     <div className="bg-white flex flex-col-reverse items-center justify-center  md:flex-row font-racing text-darkTone max-w-screen-xl mx-auto pt-32 md:pt-44 md:pb-24 md:gap-16">
       <div className="flex flex-col justify-center items-center md:items-start p-8 gap-0 md:gap-2 text-nowrap">
@@ -11,25 +19,17 @@ function Greetings() {
           I'm Danial Ross.
         </div>
         <div className="text-3xl md:text-5xl">Web Developer.</div>
-        <div className="flex justify-center w-full p-8">
-          <a
-            href="https://github.com/danialross"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-darkTone border-darkTone border-2 hover:bg-darkTone hover:text-white font-medium rounded-xl text-md px-7 py-2.5 me-2 mb-2"
-          >
-            <FontAwesomeIcon size="2x" icon={faGithub} />
-          </a>
-          <div className="w-2"></div>
-          <div className="w-5"></div>
-          <a
-            href="https://www.linkedin.com/in/danial-ross-842579214/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-darkTone border-darkTone border-2 hover:bg-darkTone hover:text-white font-medium rounded-xl text-md px-7 py-2.5 me-2 mb-2"
-          >
-            <FontAwesomeIcon size="2x" icon={faLinkedinIn} />
-          </a>
+        <div className="flex justify-center w-full p-8 gap-10">
+          {buttonsData.map((item, index) => {
+            return (
+              <ButtonWithLink
+                link={item.link}
+                size={item.size}
+                icon={item.icon}
+                key={index}
+              />
+            );
+          })}
         </div>
       </div>
       <div className="p-5">
