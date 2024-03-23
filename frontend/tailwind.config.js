@@ -11,10 +11,11 @@ module.exports = {
         hoverDarkTone: "#a8a29e",
         lightTone: "#e5e7eb",
         midTone: "#1f2937",
+        evenPageTone: "#d6d3d1",
         keyboardTone: "#eb6304",
       },
       spacing: {
-        padY: "32px",
+        padY: "56px",
       },
       keyframes: {
         spin: {

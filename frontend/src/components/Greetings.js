@@ -42,7 +42,7 @@ function Greetings() {
       </div>
       <div className="p-5">
         <img
-          className="bg-lightTone rounded-full"
+          className="bg-evenPageTone rounded-full"
           src={avatar}
           alt="avatar"
         ></img>

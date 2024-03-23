@@ -28,9 +28,9 @@ function Contact() {
   ];
 
   return (
-    <div className="bg-lightTone">
-      <div className="max-w-screen-lg mx-auto flex flex-col items-center py-padY">
-        <div className="font-racing text-5xl p-10 text-darkTone">
+    <div className="bg-evenPageTone py-padY">
+      <div className="max-w-screen-lg mx-auto flex flex-col items-center ">
+        <div className="font-racing text-5xl pt-10 pb-4 text-darkTone">
           Get in Touch
         </div>
         <div className="flex flex-col items-center p-7 gap-10 pb-10">

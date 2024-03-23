@@ -2,7 +2,7 @@ import keyboard from "../assets/keyboard.jpg";
 
 function AboutMe() {
   return (
-    <div className="bg-lightTone py-padY">
+    <div className="bg-evenPageTone py-padY">
       <div className="flex flex-col items-center lg:flex-row font-racing p-8 lg:gap-8 max-w-screen-xl mx-auto">
         <div className="flex-shrink-0">
           <img
