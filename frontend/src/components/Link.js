@@ -6,7 +6,7 @@ function Link({ icon, link, size, height }) {
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className={`flex justify-center items-center text-darkTone border-darkTone border-2 hover:bg-darkTone hover:text-white font-medium rounded-xl text-md h-${height} w-20`}
+      className={`flex justify-center items-center text-darkTone border-darkTone border-2 hover:bg-darkTone hover:text-white font-medium rounded-xl text-md ${height} w-20`}
     >
       <FontAwesomeIcon size={size} icon={icon} />
     </a>

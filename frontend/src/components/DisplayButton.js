@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function DisplayButton({ icon, text, size, copy }) {
+function DisplayButton({ icon, text, value, size, copy }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isAlerting, setIsAlerting] = useState(false);
 
   const copyText = () => {
-    navigator.clipboard.writeText(text);
+    navigator.clipboard.writeText(value);
   };
 
   const notifyUser = () => {

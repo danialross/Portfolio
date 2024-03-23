@@ -3,7 +3,7 @@ import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
 import Link from "./Link";
 
 function Greetings() {
-  const buttonHeight = 16;
+  const buttonHeight = "h-16";
   const buttonsData = [
     {
       link: "https://github.com/danialross",
