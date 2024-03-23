@@ -1,7 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
 
-function ButtonWithLink({ icon, link, size }) {
+function Link({ icon, link, size }) {
   return (
     <a
       href={link}
@@ -14,4 +13,4 @@ function ButtonWithLink({ icon, link, size }) {
   );
 }
 
-export default ButtonWithLink;
+export default Link;

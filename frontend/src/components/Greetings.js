@@ -1,6 +1,6 @@
 import avatar from "../assets/avatar.png";
 import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
-import ButtonWithLink from "./ButtonWithLink";
+import Link from "./Link";
 
 function Greetings() {
   const buttonsData = [
@@ -22,7 +22,7 @@ function Greetings() {
         <div className="flex justify-center w-full p-8 gap-10">
           {buttonsData.map((item, index) => {
             return (
-              <ButtonWithLink
+              <Link
                 link={item.link}
                 size={item.size}
                 icon={item.icon}
