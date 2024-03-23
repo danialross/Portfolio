@@ -7,7 +7,7 @@ function DisplayButton({ icon, text, size }) {
 
   return (
     <button
-      className={`font-medium text-md h-20 flex justify-start items-center justify border-darkTone border-2 rounded-xl  transition-all duration-500 ease-in-out  ${
+      className={` font-medium text-md h-20 p-[1.4rem] flex justify-start items-center justify border-darkTone border-2 rounded-xl  transition-all duration-500 ease-in-out  ${
         isExpanded
           ? "w-80 bg-darkTone text-white"
           : "w-20 bg-none text-darkTone"
@@ -16,20 +16,12 @@ function DisplayButton({ icon, text, size }) {
         setIsExpanded(!isExpanded);
       }}
     >
-      <FontAwesomeIcon
-        className={` transition-all ${
-          isExpanded
-            ? " ease-in duration-[700ms]   translate-x-[1.5rem]"
-            : " ease-out duration-200}   translate-x-[1.4rem]"
-        }`}
-        size={size}
-        icon={icon}
-      />
+      <FontAwesomeIcon size={size} icon={icon} />
       <div
-        className={` font-racing text-xl transition-all text-nowrap ${
+        className={` p-2 relative font-racing text-xl transition-opacity text-nowrap ${
           isExpanded
-            ? "opacity-100 ease-in duration-[500ms] visible  translate-x-[2rem]"
-            : "opacity-0 ease-out duration-200 invisible  "
+            ? "delay-300 opacity-100 ease-in duration-300 visible"
+            : "opacity-0 ease-in duration-200 invisible"
         }`}
       >
         {text}
