@@ -28,19 +28,16 @@ function TechStack() {
       <div className="flex justify-center text-darkTone text-5xl font-racing w-full p-10 pb-16">
         Tech Stack
       </div>
-      <div className="flex flex-wrap justify-evenly max-w-screen-xl mx-auto">
+      <div className="flex flex-wrap justify-evenly max-w-screen-xl mx-auto ">
         {logos.map((item, index) => (
-          <div key={index}>
-            <div className="flex flex-col items-center border-2 border-lightTone p-5  mx-4 mb-16 rounded-xl">
-              <div className="font-racing text-midTone text-xl pb-4 ">
-                {item.name}
-              </div>
-              <img
-                className="grayscale hover:grayscale-0 hover:w-56 hover:h-56 transition-all duration-300 w-44 h-44 object-contain "
-                src={item.icon}
-                alt={item.name}
-              />
+          <div
+            className="flex flex-col items-center justify-evenly border-2 border-lightTone p-5 mx-10 mb-16 rounded-xl grayscale hover:grayscale-0  hover:scale-125 w-52 h-64 transition-all duration-300 object-contain "
+            key={index}
+          >
+            <div className="font-racing text-midTone text-xl pb-4 ">
+              {item.name}
             </div>
+            <img className="p-2" src={item.icon} alt={item.name} />
           </div>
         ))}
       </div>
