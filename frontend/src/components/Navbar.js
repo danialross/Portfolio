@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDownload } from "@fortawesome/free-solid-svg-icons";
+import { faCloudArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
 function Navbar({ children }) {
@@ -48,12 +48,15 @@ function Navbar({ children }) {
             } w-full md:block md:w-auto`}
             id="navbar-solid-bg"
           >
-            <ul className="font-medium mt-4 rounded-lg bg-lightTone md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
-              <li className="flex flex-col items-center md:flex-row gap-5">
-                <button className="px-10">About Me</button>
+            <ul className="font-medium mt-4 rounded-lg bg-lightTone md:flex-row md:mt-0 font-racing">
+              <li className="flex flex-col items-center md:flex-row text-darkTone gap-4 md:gap-10 ">
+                <button className="hover:text-hoverDarkTone">About Me</button>
+                <button className="hover:text-hoverDarkTone">Tech Stack</button>
+                <button className="hover:text-hoverDarkTone">Contact</button>
 
-                <button className="text-darkTone border-2 border-darkTone p-2 rounded-xl  hover:text-hoverDarkTone hover:border-hoverDarkTone">
-                  <FontAwesomeIcon icon={faDownload} /> Download Resume
+                <button className="text-darkTone hover:text-hoverDarkTone hover:border-hoverDarkTone">
+                  <FontAwesomeIcon className="px-2" icon={faCloudArrowDown} />
+                  Resume
                 </button>
               </li>
             </ul>
