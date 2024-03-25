@@ -8,8 +8,16 @@ import mongodb from "../assets/mongodb.png";
 import express from "../assets/express.png";
 import mysql from "../assets/mysql.png";
 import rails from "../assets/rails.png";
+import { forwardRef, useEffect } from "react";
 
-function TechStack() {
+const TechStack = forwardRef(({ setter }, ref) => {
+  useEffect(() => {
+    const handleResize = () => setter(ref.current.offsetHeight);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [ref, setter]);
+
   const logos = [
     { name: "HTML", icon: html },
     { name: "CSS", icon: css },
@@ -24,7 +32,7 @@ function TechStack() {
   ];
 
   return (
-    <div className="bg-white py-padY">
+    <div ref={ref} className="bg-white py-padY">
       <div className="flex justify-center text-darkTone text-5xl font-racing w-full p-10 pb-16">
         Tech Stack
       </div>
@@ -43,6 +51,6 @@ function TechStack() {
       </div>
     </div>
   );
-}
+});
 
 export default TechStack;

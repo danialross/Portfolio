@@ -22,8 +22,8 @@ function App() {
     <NavBar sectionInfo={sectionInfo}>
       <Greetings ref={greetingsRef} setter={setGreetingsHeight} />
       <AboutMe ref={aboutRef} setter={setAboutHeight} />
-      <TechStack />
-      <Contact />
+      <TechStack ref={techStackRef} setter={setTechHeight} />
+      <Contact ref={contactRef} setter={setContactHeight} />
     </NavBar>
   );
 }

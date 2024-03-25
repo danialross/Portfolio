@@ -1,10 +1,18 @@
 import { faPhone, faEnvelope, faCopy } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
+import { useEffect, forwardRef } from "react";
 import DisplayButton from "./DisplayButton";
 import Link from "./Link";
 
-function Contact() {
+const Contact = forwardRef(({ setter }, ref) => {
+  useEffect(() => {
+    const handleResize = () => setter(ref.current.offsetHeight);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [ref, setter]);
+
   const contacts = [
     {
       icon: faPhone,
@@ -32,7 +40,7 @@ function Contact() {
   ];
 
   return (
-    <div className="bg-evenPageTone py-padY">
+    <div ref={ref} className="bg-evenPageTone py-padY">
       <div className="max-w-screen-lg mx-auto flex flex-col items-center ">
         <div className="font-racing text-5xl pt-10 pb-4 text-darkTone">
           Get in Touch
@@ -54,6 +62,6 @@ function Contact() {
       </div>
     </div>
   );
-}
+});
 
 export default Contact;
