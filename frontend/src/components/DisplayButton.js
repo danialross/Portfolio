@@ -18,7 +18,7 @@ function DisplayButton({ icon, text, value, size, copy }) {
 
   return (
     <button
-      className={`font-medium text-md h-20 p-[1.4rem] flex justify-start items-center justify border-darkTone border-2 rounded-xl  transition-all duration-500 ease-in-out  ${
+      className={`font-medium text-md h-20 p-[1.4rem] hover:bg-darkTone hover:text-white flex justify-start items-center justify border-darkTone border-2 rounded-xl  transition-all duration-500 ease-in-out  ${
         isExpanded
           ? "max-w-full bg-darkTone text-white"
           : "max-w-20 bg-none text-darkTone"
