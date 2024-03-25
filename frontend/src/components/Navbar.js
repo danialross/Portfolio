@@ -1,17 +1,32 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCloudArrowDown } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
-function Navbar({ children }) {
+function Navbar({ sectionInfo, children }) {
+  const buttons = ["About Me", "Tech Stack", "Contact"];
+  const navRef = useRef(null);
   const [isActive, setIsActive] = useState(false);
 
   const toggleDropDown = () => {
     setIsActive(!isActive);
   };
 
+  const scrollTo = (index) => {
+    let height = 0;
+    for (let i = 0; i < index; i++) {
+      height += sectionInfo[i].current.offsetHeight;
+    }
+    height -= navRef.current.offsetHeight;
+
+    window.scrollTo({
+      top: height,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <>
-      <nav className={`fixed w-full bg-lightTone  z-50`}>
+      <nav className={`fixed w-full bg-lightTone  z-50`} ref={navRef}>
         <div className=" max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <span className="text-darkTone font-racing self-center text-4xl whitespace-nowrap">
             Danial Ross
@@ -50,10 +65,14 @@ function Navbar({ children }) {
           >
             <ul className="font-medium mt-4 rounded-lg bg-lightTone md:flex-row md:mt-0 font-racing">
               <li className="flex flex-col items-center md:flex-row text-darkTone gap-4 md:gap-10 ">
-                <button className="hover:text-hoverDarkTone">About Me</button>
-                <button className="hover:text-hoverDarkTone">Tech Stack</button>
-                <button className="hover:text-hoverDarkTone">Contact</button>
-
+                {buttons.map((item, index) => (
+                  <button
+                    className="hover:text-hoverDarkTone"
+                    onClick={() => scrollTo(index + 1)}
+                  >
+                    {item}
+                  </button>
+                ))}
                 <button className="text-darkTone hover:text-hoverDarkTone hover:border-hoverDarkTone">
                   <FontAwesomeIcon className="px-2" icon={faCloudArrowDown} />
                   Resume

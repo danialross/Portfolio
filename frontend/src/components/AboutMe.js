@@ -1,8 +1,16 @@
 import keyboard from "../assets/keyboard.jpg";
+import { forwardRef, useEffect } from "react";
 
-function AboutMe() {
+const AboutMe = forwardRef(({ setter }, ref) => {
+  useEffect(() => {
+    const handleResize = () => setter(ref.current.offsetHeight);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [ref, setter]);
+
   return (
-    <div className="bg-evenPageTone py-padY">
+    <div ref={ref} className="bg-evenPageTone py-padY">
       <div className="flex flex-col items-center lg:flex-row font-racing p-8 lg:gap-8 max-w-screen-xl mx-auto">
         <div className="flex-shrink-0">
           <img
@@ -42,6 +50,6 @@ function AboutMe() {
       </div>
     </div>
   );
-}
+});
 
 export default AboutMe;
