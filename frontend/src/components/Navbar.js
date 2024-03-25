@@ -3,7 +3,6 @@ import { faCloudArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { useState, useRef } from "react";
 
 function Navbar({ sectionInfo, children }) {
-  const buttons = ["About Me", "Tech Stack", "Contact"];
   const navRef = useRef(null);
   const [isActive, setIsActive] = useState(false);
 
@@ -14,7 +13,7 @@ function Navbar({ sectionInfo, children }) {
   const scrollTo = (index) => {
     let height = 0;
     for (let i = 0; i < index; i++) {
-      height += sectionInfo[i].current.offsetHeight;
+      height += sectionInfo[i].ref.current.offsetHeight;
     }
     height -= navRef.current.offsetHeight;
 
@@ -65,14 +64,20 @@ function Navbar({ sectionInfo, children }) {
           >
             <ul className="font-medium mt-4 rounded-lg bg-lightTone md:flex-row md:mt-0 font-racing">
               <li className="flex flex-col items-center md:flex-row text-darkTone gap-4 md:gap-10 ">
-                {buttons.map((item, index) => (
-                  <button
-                    className="hover:text-hoverDarkTone"
-                    onClick={() => scrollTo(index + 1)}
-                  >
-                    {item}
-                  </button>
-                ))}
+                {sectionInfo.map((item, index) => {
+                  if (index === 0) {
+                    return null;
+                  }
+                  return (
+                    <button
+                      className="hover:text-hoverDarkTone"
+                      onClick={() => scrollTo(index)}
+                      key={index}
+                    >
+                      {item.buttonText}
+                    </button>
+                  );
+                })}
                 <button className="text-darkTone hover:text-hoverDarkTone hover:border-hoverDarkTone">
                   <FontAwesomeIcon className="px-2" icon={faCloudArrowDown} />
                   Resume

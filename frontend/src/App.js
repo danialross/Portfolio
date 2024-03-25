@@ -16,14 +16,38 @@ function App() {
   const [, setTechHeight] = useState(0);
   const [, setContactHeight] = useState(0);
 
-  const sectionInfo = [greetingsRef, aboutRef, techStackRef, contactRef];
+  const sectionInfo = [
+    {
+      buttonText: "Greetings",
+      ref: greetingsRef,
+      component: Greetings,
+      setter: setGreetingsHeight,
+    },
+    {
+      buttonText: "About Me",
+      ref: aboutRef,
+      component: AboutMe,
+      setter: setAboutHeight,
+    },
+    {
+      buttonText: "Tech Stack",
+      ref: techStackRef,
+      component: TechStack,
+      setter: setTechHeight,
+    },
+    {
+      buttonText: "Contact",
+      ref: contactRef,
+      component: Contact,
+      setter: setContactHeight,
+    },
+  ];
 
   return (
     <NavBar sectionInfo={sectionInfo}>
-      <Greetings ref={greetingsRef} setter={setGreetingsHeight} />
-      <AboutMe ref={aboutRef} setter={setAboutHeight} />
-      <TechStack ref={techStackRef} setter={setTechHeight} />
-      <Contact ref={contactRef} setter={setContactHeight} />
+      {sectionInfo.map((item, index) => (
+        <item.component ref={item.ref} setter={item.setter} key={index} />
+      ))}
     </NavBar>
   );
 }
