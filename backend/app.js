@@ -17,8 +17,8 @@ app.use(
 
 app.use("/files", express.static(path.join(__dirname, "files")));
 
-app.get("/", (req, res) => {
-  res.send("Hello, Express!");
+app.get("/home", (req, res) => {
+  res.send("Welcome Home!");
 });
 
 app.listen(PORT, () => {
