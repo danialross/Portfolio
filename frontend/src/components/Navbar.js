@@ -26,6 +26,7 @@ function Navbar({ sectionInfo, children }) {
   };
 
   const fetchResume = async () => {
+    console.log("clicked");
     try {
       const response = await axios.get(
         "https://portfolio-ivory-xi-67.vercel.app/api/files/Danial_Ross_Resume.pdf",
