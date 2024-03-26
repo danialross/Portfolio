@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCloudArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { useState, useRef } from "react";
+import axios from "axios";
 
 function Navbar({ sectionInfo, children }) {
   const navRef = useRef(null);
@@ -23,6 +24,31 @@ function Navbar({ sectionInfo, children }) {
       behavior: "smooth",
     });
   };
+
+  const fetchResume = async () => {
+    try {
+      const response = await axios.get(
+        "https://portfolio-one-rho-12.vercel.app/files/Danial_Ross_Resume.pdf",
+        { responseType: "blob" }
+      );
+
+      const pdfBlob = new Blob([response.data], { type: "application/pdf" });
+
+      const fileUrl = URL.createObjectURL(pdfBlob);
+
+      const link = document.createElement("a");
+      link.href = fileUrl;
+      link.setAttribute("download", "Danial_Ross_Resume.pdf");
+      document.body.appendChild(link);
+      link.click();
+
+      URL.revokeObjectURL(link.href);
+      link.parentNode.removeChild(link);
+    } catch (error) {
+      console.error("Error downloading the PDF: ", error);
+    }
+  };
+
   return (
     <>
       <nav className={`fixed w-full bg-lightTone  z-50`} ref={navRef}>
@@ -78,7 +104,10 @@ function Navbar({ sectionInfo, children }) {
                     </button>
                   );
                 })}
-                <button className="text-darkTone hover:text-hoverDarkTone hover:border-hoverDarkTone">
+                <button
+                  className="text-darkTone hover:text-hoverDarkTone hover:border-hoverDarkTone"
+                  onClick={fetchResume}
+                >
                   <FontAwesomeIcon className="px-2" icon={faCloudArrowDown} />
                   Resume
                 </button>
