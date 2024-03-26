@@ -28,7 +28,7 @@ function Navbar({ sectionInfo, children }) {
   const fetchResume = async () => {
     try {
       const response = await axios.get(
-        "https://portfolio-one-rho-12.vercel.app/files/Danial_Ross_Resume.pdf",
+        "https://portfolio-ivory-xi-67.vercel.app/api/files/Danial_Ross_Resume.pdf",
         { responseType: "blob" }
       );
 
