@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Portfolio/static/css/main.7469a32c.css",
+    "main.js": "/Portfolio/static/js/main.10e87580.js",
+    "static/media/keyboard.jpg": "/Portfolio/static/media/keyboard.8fe53e714322f4a790ab.jpg",
+    "static/media/react.png": "/Portfolio/static/media/react.8a6fc0a24a800d1e0f4a.png",
+    "static/media/nodejs.png": "/Portfolio/static/media/nodejs.d980d9636ace07ad3dde.png",
+    "static/media/avatar.png": "/Portfolio/static/media/avatar.b233f0b322e7c592971b.png",
+    "static/media/html5.png": "/Portfolio/static/media/html5.860d906ddaa16acfecda.png",
+    "static/media/rails.png": "/Portfolio/static/media/rails.5d31cc2adfa48a795cf5.png",
+    "static/media/mongodb.png": "/Portfolio/static/media/mongodb.bf8042403d8797a7ff1b.png",
+    "static/media/css.png": "/Portfolio/static/media/css.58dfbebae4a02001b50e.png",
+    "static/media/mysql.png": "/Portfolio/static/media/mysql.4676ad983d6bd3e9fac9.png",
+    "static/media/express.png": "/Portfolio/static/media/express.e3d4f9e5c8b469e45838.png",
+    "static/media/js.png": "/Portfolio/static/media/js.266bd9fb2663dcc057b4.png",
+    "static/media/tailwind.svg": "/Portfolio/static/media/tailwind.f94972e4845d675a49698c46b404a570.svg",
+    "index.html": "/Portfolio/index.html",
+    "main.7469a32c.css.map": "/Portfolio/static/css/main.7469a32c.css.map",
+    "main.10e87580.js.map": "/Portfolio/static/js/main.10e87580.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7469a32c.css",
+    "static/js/main.10e87580.js"
+  ]
+}
