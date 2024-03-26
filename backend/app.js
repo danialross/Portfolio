@@ -15,12 +15,10 @@ app.use(
   })
 );
 
-app.use("/files", express.static(path.join(__dirname, "files")));
+app.use("/api/files", express.static(path.join(__dirname, "files")));
 
-app.get("/home", (req, res) => {
+app.get("/api/home", (req, res) => {
   res.send("Welcome Home!");
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-});
+module.exports = app;
