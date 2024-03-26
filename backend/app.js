@@ -9,7 +9,7 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: ["http://example.com", "http://localhost:3000"],
+    origin: ["https://danialross.github.io/Portfolio"],
     methods: ["GET"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
