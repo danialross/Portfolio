@@ -29,7 +29,7 @@ function Navbar({ sectionInfo, children }) {
     console.log("clicked");
     try {
       const response = await axios.get(
-        "https://portfolio-ivory-xi-67.vercel.app/api/files/Danial_Ross_Resume.pdf",
+        "https://danialross-backend.vercel.app/api/files/Danial_Ross_Resume.pdf",
         { responseType: "blob" }
       );
 
