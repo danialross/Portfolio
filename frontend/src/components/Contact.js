@@ -45,7 +45,7 @@ const Contact = forwardRef(({ setter }, ref) => {
         <div className="font-racing text-5xl pt-10 pb-4 text-darkTone">
           Get in Touch
         </div>
-        <div className="flex flex-col items-center p-7 gap-10 pb-10">
+        <div className="flex flex-col w-full items-center p-7 gap-10 pb-10">
           {contacts.map((item, index) => (
             <item.button
               key={index}

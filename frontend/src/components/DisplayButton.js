@@ -16,9 +16,14 @@ function DisplayButton({ icon, text, value, size, copy }) {
     }, 2000);
   };
 
+  const textStyle =
+    "p-2 font-racing text-xl transition-opacity text-nowrap duration-300";
+  const expand = "delay-100 opacity-100 ease-in visible";
+  const collapse = "opacity-0 ease-in invisible";
+
   return (
     <button
-      className={`font-medium text-md h-20 p-[1.4rem] hover:bg-darkTone hover:text-white flex justify-start items-center justify border-darkTone border-2 rounded-xl  transition-all duration-500 ease-in-out  ${
+      className={`font-medium text-md h-20 p-[1.4rem] hover:bg-darkTone hover:text-white flex justify-start items-center justify border-darkTone border-2 rounded-xl  transition-all duration-300 ease-in-out  ${
         isExpanded
           ? "max-w-full bg-darkTone text-white"
           : "max-w-20 bg-none text-darkTone"
@@ -28,22 +33,12 @@ function DisplayButton({ icon, text, value, size, copy }) {
       }}
     >
       <FontAwesomeIcon size={size} icon={icon} />
-      <div
-        className={` p-2 font-racing text-xl transition-opacity text-nowrap ${
-          isExpanded
-            ? "delay-300 opacity-100 ease-in duration-300 visible"
-            : "opacity-0 ease-in duration-200 invisible"
-        }`}
-      >
+      <div className={`${textStyle} ${isExpanded ? expand : collapse}`}>
         {text}
       </div>
 
       <FontAwesomeIcon
-        className={` relative p-2 font-racing text-xl transition-opacity text-nowrap ${
-          isExpanded
-            ? "delay-300 opacity-100 ease-in duration-300 visible"
-            : "opacity-0 ease-in duration-200 invisible"
-        }`}
+        className={` relative ${textStyle} ${isExpanded ? expand : collapse}`}
         onClick={(event) => {
           event.stopPropagation();
           copyText();
