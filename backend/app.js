@@ -9,16 +9,12 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: ["https://danialross.github.io/Portfolio/"],
+    origin: ["danialross.vercel.app"],
     methods: ["GET"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 
 app.use("/api/files", express.static(path.join(__dirname, "files")));
-
-app.get("/api/home", (req, res) => {
-  res.send("Welcome Home!");
-});
 
 module.exports = app;
