@@ -9,7 +9,7 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: ["danialross.vercel.app"],
+    origin: ["https://danialross.vercel.app"],
     methods: ["GET"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
