@@ -1,15 +1,35 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCloudArrowDown } from "@fortawesome/free-solid-svg-icons";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import axios from "axios";
 
 function Navbar({ sectionInfo, children }) {
   const navRef = useRef(null);
+  const buttonRef = useRef(null);
+  const dropDownRef = useRef(null);
   const [isActive, setIsActive] = useState(false);
 
-  const toggleDropDown = () => {
+  useEffect(() => {
+    const handleClick = (event) => {
+      if (
+        dropDownRef.current &&
+        buttonRef.current &&
+        !dropDownRef.current.contains(event.target) &&
+        !buttonRef.current.contains(event.target) &&
+        isActive
+      ) {
+        setIsActive(!isActive);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClick);
+
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, [isActive, dropDownRef]);
+
+  const toggleDropDown = useCallback(() => {
     setIsActive(!isActive);
-  };
+  }, [isActive]);
 
   const scrollTo = (index) => {
     let height = 0;
@@ -61,6 +81,7 @@ function Navbar({ sectionInfo, children }) {
           </button>
 
           <button
+            ref={buttonRef}
             onClick={toggleDropDown}
             type="button"
             className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
@@ -91,7 +112,10 @@ function Navbar({ sectionInfo, children }) {
             } w-full md:block md:w-auto`}
             id="navbar-solid-bg"
           >
-            <ul className="font-medium mt-4 rounded-lg bg-lightTone md:flex-row md:mt-0">
+            <ul
+              className="font-medium mt-4 rounded-lg bg-lightTone md:flex-row md:mt-0"
+              ref={dropDownRef}
+            >
               <li className="flex flex-col items-center md:flex-row text-darkTone gap-6 md:gap-12 ">
                 {sectionInfo.map((item, index) => {
                   if (index === 0) {
