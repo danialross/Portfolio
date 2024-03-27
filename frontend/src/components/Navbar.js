@@ -26,7 +26,6 @@ function Navbar({ sectionInfo, children }) {
   };
 
   const fetchResume = async () => {
-    console.log("clicked");
     try {
       const response = await axios.get(
         "https://danialross-backend.vercel.app/api/files/Danial_Ross_Resume.pdf",
