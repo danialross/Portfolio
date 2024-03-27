@@ -8,7 +8,6 @@ module.exports = {
       },
       colors: {
         darkTone: "#57534e",
-        hoverDarkTone: "#a8a29e",
         lightTone: "#e5e7eb",
         midTone: "#1f2937",
         evenPageTone: "#d6d3d1",

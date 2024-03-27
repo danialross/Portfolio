@@ -53,9 +53,12 @@ function Navbar({ sectionInfo, children }) {
     <>
       <nav className={`fixed w-full bg-lightTone  z-50`} ref={navRef}>
         <div className=" max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <span className="text-darkTone font-racing self-center text-4xl whitespace-nowrap">
+          <button
+            className="text-darkTone font-racing self-center text-4xl whitespace-nowrap opacity-100 hover:opacity-50 animation-opacity duration-200"
+            onClick={() => scrollTo(0)}
+          >
             Danial Ross
-          </span>
+          </button>
 
           <button
             onClick={toggleDropDown}
@@ -88,15 +91,15 @@ function Navbar({ sectionInfo, children }) {
             } w-full md:block md:w-auto`}
             id="navbar-solid-bg"
           >
-            <ul className="font-medium mt-4 rounded-lg bg-lightTone md:flex-row md:mt-0 font-racing">
-              <li className="flex flex-col items-center md:flex-row text-darkTone gap-4 md:gap-10 ">
+            <ul className="font-medium mt-4 rounded-lg bg-lightTone md:flex-row md:mt-0">
+              <li className="flex flex-col items-center md:flex-row text-darkTone gap-6 md:gap-12 ">
                 {sectionInfo.map((item, index) => {
                   if (index === 0) {
                     return null;
                   }
                   return (
                     <button
-                      className="hover:text-hoverDarkTone"
+                      className="opacity-100 duration-200 hover:opacity-50"
                       onClick={() => scrollTo(index)}
                       key={index}
                     >
@@ -105,7 +108,7 @@ function Navbar({ sectionInfo, children }) {
                   );
                 })}
                 <button
-                  className="text-darkTone hover:text-hoverDarkTone hover:border-hoverDarkTone"
+                  className="text-darkTone opacity-100 duration-200 hover:opacity-50"
                   onClick={fetchResume}
                 >
                   <FontAwesomeIcon className="px-2" icon={faCloudArrowDown} />
