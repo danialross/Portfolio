@@ -20,10 +20,10 @@ const AboutMe = forwardRef(({ setter }, ref) => {
           />
         </div>
         <div>
-          <div className="flex justify-center text-3xl lg:text-5xl pt-8 pb-6 lg:px-8 md:pb-8 lg:pt-2 text-darkTone">
+          <div className="flex justify-center text-3xl lg:text-5xl pt-8 pb-6 lg:px-8 lg:pb-8 lg:pt-2 text-darkTone">
             About Me
           </div>
-          <div className="w-screen lg:w-auto text-midTone text-md sm:text-xl sm:px-8 leading-8 sm:leading-10 indent-12 px-10">
+          <div className="lg:w-auto text-midTone text-md md:text-xl md:px-20 leading-8 md:leading-10 indent-12 px-4">
             I'm a recent
             <span className="text-keyboardTone"> Computer Science </span>
             graduate from
