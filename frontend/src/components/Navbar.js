@@ -71,7 +71,7 @@ function Navbar({ sectionInfo, children }) {
 
   return (
     <div className="w-screen overflow-x-hidden">
-      <nav className={` w-full bg-lightTone  z-50`} ref={navRef}>
+      <nav className={`fixed w-full bg-lightTone  z-50`} ref={navRef}>
         <div className=" max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <button
             className="text-darkTone font-racing self-center text-4xl whitespace-nowrap opacity-100 hover:opacity-50 animation-opacity duration-200"
