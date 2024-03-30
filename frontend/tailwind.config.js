@@ -16,15 +16,9 @@ module.exports = {
       spacing: {
         padY: "56px",
       },
-      keyframes: {
-        spin: {
-          "0%": { transform: "rotate(0deg)" },
-          "50%": { transform: "rotate(90deg)" },
-          "100%": { transform: "rotate(0deg)" },
-        },
-      },
-      animation: {
-        shake: "spin 0.3s ease-out infinite",
+      translate: {
+        "full-vw": "100vw",
+        "-full-vw": "-100vw",
       },
     },
   },

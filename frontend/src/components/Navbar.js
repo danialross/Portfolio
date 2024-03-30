@@ -36,7 +36,13 @@ function Navbar({ sectionInfo, children }) {
     for (let i = 0; i < index; i++) {
       height += sectionInfo[i].ref.current.offsetHeight;
     }
-    height -= navRef.current.offsetHeight;
+    const isLessThanMd = window.matchMedia("(max-width: 767px)").matches;
+
+    if (isLessThanMd) {
+      height -= 280;
+    } else {
+      height -= navRef.current.offsetHeight;
+    }
 
     window.scrollTo({
       top: height,
@@ -108,12 +114,14 @@ function Navbar({ sectionInfo, children }) {
 
           <div
             className={`${
-              isActive ? "block" : "hidden"
-            } w-full md:block md:w-auto`}
+              isActive
+                ? "-translate-x-4 translate-y-32"
+                : "translate-x-full-vw translate-y-32"
+            } w-full block absolute md:static md:translate-x-0 md:translate-y-0 md:w-auto transition-transform duration-100`}
             id="navbar-solid-bg"
           >
             <ul
-              className="font-medium mt-4 rounded-lg bg-lightTone md:flex-row md:mt-0"
+              className="font-medium mt-4 rounded-3xl bg-lightTone md:flex-row md:mt-0 p-6"
               ref={dropDownRef}
             >
               <li className="flex flex-col items-center md:flex-row text-darkTone gap-6 md:gap-12 ">
