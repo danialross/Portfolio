@@ -76,7 +76,7 @@ function Navbar({ sectionInfo, children }) {
   };
 
   return (
-    <div className="w-screen overflow-x-hidden">
+    <div className="w-full overflow-x-hidden">
       <nav className={`fixed w-full bg-lightTone  z-50`} ref={navRef}>
         <div className=" max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <button
@@ -121,7 +121,7 @@ function Navbar({ sectionInfo, children }) {
             id="navbar-solid-bg"
           >
             <ul
-              className="font-medium mt-4 rounded-3xl bg-lightTone md:flex-row md:mt-0 p-6"
+              className="font-medium mt-4 rounded-xl bg-lightTone md:flex-row md:mt-0 p-6"
               ref={dropDownRef}
             >
               <li className="flex flex-col items-center md:flex-row text-darkTone gap-6 md:gap-12 ">
