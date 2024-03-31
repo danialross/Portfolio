@@ -29,7 +29,7 @@ const Greetings = forwardRef(({ setter }, ref) => {
   return (
     <div
       ref={ref}
-      className="bg-white flex flex-col-reverse items-center justify-center  md:flex-row font-racing text-darkTone max-w-screen-xl mx-auto pt-28 md:pt-28 md:pb-24 md:gap-16"
+      className="bg-white flex flex-col-reverse items-center justify-center  md:flex-row font-racing text-darkTone max-w-screen-xl mx-auto pt-28 md:pt-44 md:pb-24 md:gap-16"
     >
       <div className="flex flex-col justify-center items-center md:items-start p-8 gap-0 md:gap-2 text-nowrap">
         <div className="text-3xl md:text-5xl">Hello, World!</div>
