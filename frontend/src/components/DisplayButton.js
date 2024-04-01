@@ -23,7 +23,7 @@ function DisplayButton({ icon, text, value, size, copy }) {
 
   return (
     <button
-      className={`font-medium text-md h-20 p-[1.4rem] hover:bg-darkTone hover:text-white flex justify-start items-center justify border-darkTone border-2 rounded-xl  transition-all duration-300 ease-in-out  ${
+      className={`h-20 p-[1.4rem] hover:bg-darkTone hover:text-white flex justify-start items-center justify border-darkTone border-2 rounded-xl  transition-all duration-300 ease-in-out  ${
         isExpanded
           ? "max-w-full bg-darkTone text-white"
           : "max-w-20 bg-none text-darkTone"
@@ -33,7 +33,11 @@ function DisplayButton({ icon, text, value, size, copy }) {
       }}
     >
       <FontAwesomeIcon size={size} icon={icon} />
-      <div className={`${textStyle} ${isExpanded ? expand : collapse}`}>
+      <div
+        className={`text-lg font-medium  ${textStyle} ${
+          isExpanded ? expand : collapse
+        }`}
+      >
         {text}
       </div>
 
