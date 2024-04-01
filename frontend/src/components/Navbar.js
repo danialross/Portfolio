@@ -36,13 +36,8 @@ function Navbar({ sectionInfo, children }) {
     for (let i = 0; i < index; i++) {
       height += sectionInfo[i].ref.current.offsetHeight;
     }
-    const isLessThanMd = window.matchMedia("(max-width: 767px)").matches;
 
-    if (isLessThanMd) {
-      height -= 280;
-    } else {
-      height -= navRef.current.offsetHeight;
-    }
+    height -= navRef.current.offsetHeight;
 
     window.scrollTo({
       top: height,
@@ -132,7 +127,12 @@ function Navbar({ sectionInfo, children }) {
                   return (
                     <button
                       className="opacity-100 duration-200 hover:opacity-50"
-                      onClick={() => scrollTo(index)}
+                      onClick={() => {
+                        if (isActive) {
+                          setIsActive(false);
+                        }
+                        scrollTo(index);
+                      }}
                       key={index}
                     >
                       {item.buttonText}
