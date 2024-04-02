@@ -17,7 +17,7 @@ function DisplayButton({ icon, text, value, size, copy }) {
   };
 
   const textStyle =
-    "p-2 font-racing text-xl transition-opacity text-nowrap duration-300";
+    "text-lg font-medium p-2 font-racing transition-opacity text-nowrap duration-300";
   const expand = "delay-100 opacity-100 ease-in visible";
   const collapse = "opacity-0 ease-in invisible";
 
@@ -33,11 +33,7 @@ function DisplayButton({ icon, text, value, size, copy }) {
       }}
     >
       <FontAwesomeIcon size={size} icon={icon} />
-      <div
-        className={`text-lg font-medium  ${textStyle} ${
-          isExpanded ? expand : collapse
-        }`}
-      >
+      <div className={`${textStyle} ${isExpanded ? expand : collapse}`}>
         {text}
       </div>
 
