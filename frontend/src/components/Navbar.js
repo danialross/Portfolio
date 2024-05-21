@@ -75,7 +75,7 @@ function Navbar({ sectionInfo, children }) {
       <nav className={`fixed w-full bg-lightTone  z-50`} ref={navRef}>
         <div className=" max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <button
-            className="text-darkTone font-racing self-center text-4xl whitespace-nowrap opacity-100 hover:opacity-50 animation-opacity duration-200"
+            className="text-darkTone font-racing self-center text-4xl whitespace-nowrap opacity-100 hover:opacity-50 animation-opacity duration-200 pl-6"
             onClick={() => scrollTo(0)}
           >
             Danial Ross
@@ -119,7 +119,7 @@ function Navbar({ sectionInfo, children }) {
               className="font-medium mt-4 rounded-xl bg-lightTone md:flex-row md:mt-0 p-6"
               ref={dropDownRef}
             >
-              <li className="flex flex-col items-center md:flex-row text-darkTone gap-6 md:gap-12 ">
+              <li className="flex flex-col items-center md:flex-row text-darkTone gap-6 md:gap-6 ">
                 {sectionInfo.map((item, index) => {
                   if (index === 0) {
                     return null;
