@@ -27,7 +27,7 @@ const Works = forwardRef(({ setter }, ref) => {
     {
       name: "Vibe Vault",
       img: VibeVaultImg,
-      link: "https://vibevaultmusic.vercel.app",
+      url: "https://vibevaultmusic.vercel.app",
       icon: faGlobe,
       github: [
         {
@@ -59,10 +59,26 @@ const Works = forwardRef(({ setter }, ref) => {
               <img
                 src={item.img}
                 alt="website screenshot"
-                className="rounded-xl border-2 border-darkTone mb-12"
+                className="rounded-xl border-2 border-darkTone mb-8"
               />
+              {item.url && (
+                <div className="flex flex-col justify-center items-center text-xl mb-6">
+                  <div className="mb-6">Link</div>
+                  <a
+                    href={item.url}
+                    className=" border-2 border-darkTone rounded-lg bg-white p-2"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FontAwesomeIcon
+                      icon={item.icon}
+                      size="2x"
+                      className="p-2"
+                    />
+                  </a>
+                </div>
+              )}
               <div className="text-xl mb-6">Source Code</div>
-
               <div className="flex justify-center items-center gap-4">
                 {item.github.map((link, index) => {
                   return (
