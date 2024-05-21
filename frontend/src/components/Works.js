@@ -45,25 +45,25 @@ const Works = forwardRef(({ setter }, ref) => {
   return (
     <div
       ref={ref}
-      className="w-full py-padY flex-col md:flex justify-center items-center font-racing text-darkTone bg-evenPageTone"
+      className="w-full py-padY flex flex-col  justify-center items-center font-racing text-darkTone bg-evenPageTone"
     >
-      <div className="text-5xl mt-10 mb-8">Works</div>
-      <div className="w-full flex justify-center items-start gap-24">
+      <div className="text-5xl mt-10 mb-12">Works</div>
+      <div className="w-full flex flex-col flex-wrap md:flex-row justify-start items-center md:justify-center md:items-start gap-20 md:gap-24">
         {sections.map((item, index) => {
           return (
             <div
-              className="flex flex-col justify-center items-center text-center text-xl w-1/4 h-1/4"
+              className="flex flex-col justify-center items-center text-center text-xl w-64 gap-6 md:gap-8"
               key={index}
             >
-              <div className="text-3xl mb-8">{item.name}</div>
+              <div className="text-3xl">{item.name}</div>
               <img
                 src={item.img}
                 alt="website screenshot"
-                className="rounded-xl border-2 border-darkTone mb-8"
+                className="rounded-xl border-2 border-darkTone"
               />
               {item.url && (
-                <div className="flex flex-col justify-center items-center text-xl mb-6">
-                  <div className="mb-6">Link</div>
+                <>
+                  Link
                   <a
                     href={item.url}
                     className=" border-2 border-darkTone rounded-lg bg-white p-2"
@@ -76,29 +76,25 @@ const Works = forwardRef(({ setter }, ref) => {
                       className="p-2"
                     />
                   </a>
-                </div>
+                </>
               )}
-              <div className="text-xl mb-6">Source Code</div>
-              <div className="flex justify-center items-center gap-4">
+              <div className="text-xl">Source Code</div>
+              <div className="flex justify-center items-center gap-8">
                 {item.github.map((link, index) => {
                   return (
-                    <div
-                      className="flex justify-center items-center mx-2"
+                    <a
                       key={index}
+                      href={link.url}
+                      className=" border-2 border-darkTone rounded-lg bg-white p-2"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      <a
-                        href={link.url}
-                        className=" border-2 border-darkTone rounded-lg bg-white p-2"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <FontAwesomeIcon
-                          icon={link.icon}
-                          size="2x"
-                          className="p-2"
-                        />
-                      </a>
-                    </div>
+                      <FontAwesomeIcon
+                        icon={link.icon}
+                        size="2x"
+                        className="p-2"
+                      />
+                    </a>
                   );
                 })}
               </div>
