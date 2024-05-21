@@ -40,7 +40,7 @@ const Contact = forwardRef(({ setter }, ref) => {
   ];
 
   return (
-    <div ref={ref} className="bg-evenPageTone py-padY">
+    <div ref={ref} className="py-padY">
       <div className="max-w-screen-lg mx-auto flex flex-col items-center ">
         <div className="font-racing text-5xl pt-10 pb-4 text-darkTone">
           Get in Touch

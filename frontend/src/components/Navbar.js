@@ -110,8 +110,8 @@ function Navbar({ sectionInfo, children }) {
           <div
             className={`${
               isActive
-                ? "-translate-x-4 translate-y-32"
-                : "translate-x-full-vw translate-y-32"
+                ? "-translate-x-4 translate-y-36"
+                : "translate-x-full-vw translate-y-36"
             } w-full block absolute md:static md:translate-x-0 md:translate-y-0 md:w-auto transition-transform duration-100`}
             id="navbar-solid-bg"
           >

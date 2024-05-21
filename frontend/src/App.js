@@ -3,6 +3,7 @@ import AboutMe from "./components/AboutMe";
 import Greetings from "./components/Greetings";
 import TechStack from "./components/TechStack";
 import Contact from "./components/Contact";
+import Works from "./components/Works";
 import { useState, useRef } from "react";
 
 function App() {
@@ -10,11 +11,13 @@ function App() {
   const aboutRef = useRef(null);
   const techStackRef = useRef(null);
   const contactRef = useRef(null);
+  const worksRef = useRef(null);
 
   const [, setGreetingsHeight] = useState(0);
   const [, setAboutHeight] = useState(0);
   const [, setTechHeight] = useState(0);
   const [, setContactHeight] = useState(0);
+  const [, setWorksHeight] = useState(0);
 
   const sectionInfo = [
     {
@@ -34,6 +37,12 @@ function App() {
       ref: techStackRef,
       component: TechStack,
       setter: setTechHeight,
+    },
+    {
+      buttonText: "Works",
+      ref: worksRef,
+      component: Works,
+      setter: setWorksHeight,
     },
     {
       buttonText: "Contact",
