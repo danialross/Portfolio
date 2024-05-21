@@ -3,8 +3,6 @@ const cors = require("cors");
 const path = require("path");
 const app = express();
 
-const PORT = process.env.PORT || 3001;
-
 app.use(express.json());
 
 app.use(
@@ -15,6 +13,10 @@ app.use(
   })
 );
 
-app.use("/api/files", express.static(path.join(__dirname, "files")));
+app.get("/", (req, res) => {
+  res.send({ message: "Resume Serving API for Danial Ross Portfolio Website" });
+});
+
+app.use("/get-resume", express.static(path.join(__dirname, "files")));
 
 module.exports = app;
