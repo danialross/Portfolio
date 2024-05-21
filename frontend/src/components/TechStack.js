@@ -33,7 +33,7 @@ const TechStack = forwardRef(({ setter }, ref) => {
 
   return (
     <div ref={ref} className="bg-white py-padY">
-      <div className="flex justify-center text-darkTone text-5xl font-racing w-full p-10 pb-16">
+      <div className="flex justify-center text-darkTone text-5xl font-racing w-full px-10 pb-16">
         Tech Stack
       </div>
       <div className="flex flex-wrap justify-evenly max-w-screen-xl mx-auto ">

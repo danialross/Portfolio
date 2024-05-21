@@ -47,7 +47,7 @@ const Works = forwardRef(({ setter }, ref) => {
       ref={ref}
       className="w-full py-padY flex flex-col  justify-center items-center font-racing text-darkTone bg-evenPageTone"
     >
-      <div className="text-5xl mt-10 mb-12">Works</div>
+      <div className="text-5xl mb-12">Works</div>
       <div className="w-full flex flex-col flex-wrap md:flex-row justify-start items-center md:justify-center md:items-start gap-20 md:gap-24">
         {sections.map((item, index) => {
           return (
