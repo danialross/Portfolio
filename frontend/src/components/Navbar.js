@@ -119,7 +119,7 @@ function Navbar({ sectionInfo, children }) {
               className="font-medium mt-4 rounded-xl bg-lightTone md:flex-row md:mt-0 p-6"
               ref={dropDownRef}
             >
-              <li className="flex flex-col items-center md:flex-row text-darkTone gap-6 md:gap-6 ">
+              <li className="flex flex-col items-center md:flex-row text-darkTone gap-6 lg:gap-14 ">
                 {sectionInfo.map((item, index) => {
                   if (index === 0) {
                     return null;
