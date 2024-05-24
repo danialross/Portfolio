@@ -7,7 +7,8 @@ function Navbar({ sectionInfo, children }) {
   const navRef = useRef(null);
   const buttonRef = useRef(null);
   const dropDownRef = useRef(null);
-  const [isActive, setIsActive] = useState(false);
+  const [isShowDropDown, setIsShowDropDown] = useState(false);
+  const [opacity, setOpacity] = useState("opacity-0");
 
   useEffect(() => {
     const handleClick = (event) => {
@@ -16,20 +17,27 @@ function Navbar({ sectionInfo, children }) {
         buttonRef.current &&
         !dropDownRef.current.contains(event.target) &&
         !buttonRef.current.contains(event.target) &&
-        isActive
+        isShowDropDown
       ) {
-        setIsActive(!isActive);
+        setIsShowDropDown(!isShowDropDown);
       }
     };
 
     document.addEventListener("mousedown", handleClick);
 
     return () => document.removeEventListener("mousedown", handleClick);
-  }, [isActive, dropDownRef]);
+  }, [isShowDropDown, dropDownRef]);
 
-  const toggleDropDown = useCallback(() => {
-    setIsActive(!isActive);
-  }, [isActive]);
+  const toggleDropDown = () => {
+    setIsShowDropDown((prevState) => !prevState);
+  };
+
+  //dropdown only visible when active
+  useEffect(() => {
+    if (isShowDropDown) {
+      setOpacity("opacity-100");
+    }
+  }, [isShowDropDown]);
 
   const scrollTo = (index) => {
     let height = 0;
@@ -109,11 +117,16 @@ function Navbar({ sectionInfo, children }) {
 
           <div
             className={`${
-              isActive
-                ? "-translate-x-4 translate-y-36"
-                : "translate-x-full-vw translate-y-36"
-            } w-full block absolute md:static md:translate-x-0 md:translate-y-0 md:w-auto transition-transform duration-100`}
+              isShowDropDown ? `-translate-x-4` : `translate-x-full-vw`
+            } 
+            w-full block absolute ${opacity} md:opacity-100 translate-y-36 md:block md:static md:translate-x-0 md:translate-y-0 md:w-auto transition-transform duration-100`}
             id="navbar-solid-bg"
+            //hide dropdown when not active
+            onTransitionEnd={() => {
+              if (!isShowDropDown) {
+                setOpacity("opacity-0");
+              }
+            }}
           >
             <ul
               className="font-medium mt-4 rounded-xl bg-lightTone md:flex-row md:mt-0 p-6"
@@ -128,8 +141,8 @@ function Navbar({ sectionInfo, children }) {
                     <button
                       className="opacity-100 duration-200 hover:opacity-50"
                       onClick={() => {
-                        if (isActive) {
-                          setIsActive(false);
+                        if (isShowDropDown) {
+                          setIsShowDropDown(false);
                         }
                         scrollTo(index);
                       }}
