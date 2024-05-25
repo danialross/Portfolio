@@ -28,7 +28,6 @@ const TechStack = forwardRef(({ setter }, ref) => {
     { name: "MongoDB", icon: mongodb },
     { name: "Express", icon: express },
     { name: "MySQL", icon: mysql },
-    { name: "Rails", icon: rails },
   ];
 
   return (
