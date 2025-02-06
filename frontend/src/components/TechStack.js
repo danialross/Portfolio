@@ -5,9 +5,11 @@ import nodeJs from "../assets/nodejs.png";
 import react from "../assets/react.png";
 import tailwind from "../assets/tailwind.svg";
 import mongodb from "../assets/mongodb.png";
-import express from "../assets/express.png";
 import mysql from "../assets/mysql.png";
-import rails from "../assets/rails.png";
+import docker from "../assets/docker.png";
+import nestjs from "../assets/nestjs.svg";
+import nextjs from "../assets/nextjs.png";
+import typescript from "../assets/typescript.svg";
 import { forwardRef, useEffect } from "react";
 
 const TechStack = forwardRef(({ setter }, ref) => {
@@ -22,12 +24,15 @@ const TechStack = forwardRef(({ setter }, ref) => {
     { name: "HTML", icon: html },
     { name: "CSS", icon: css },
     { name: "Javascript", icon: js },
-    { name: "Node.JS", icon: nodeJs },
+    { name: "Typescript", icon: typescript },
     { name: "React", icon: react },
+    { name: "Next.JS", icon: nextjs },
+    { name: "Node.JS", icon: nodeJs },
+    { name: "Nest.JS", icon: nestjs },
     { name: "TailwindCSS", icon: tailwind },
     { name: "MongoDB", icon: mongodb },
-    { name: "Express", icon: express },
     { name: "MySQL", icon: mysql },
+    { name: "Docker", icon: docker },
   ];
 
   return (

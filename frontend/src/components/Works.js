@@ -4,6 +4,7 @@ import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faNode, faReact } from "@fortawesome/free-brands-svg-icons";
 import PortfolioImg from "../assets/Portfolio.png";
 import VibeVaultImg from "../assets/VibeVault.png";
+import AgoraImg from "../assets/theAgora.png";
 
 const Works = forwardRef(({ setter }, ref) => {
   useEffect(() => {
@@ -38,8 +39,20 @@ const Works = forwardRef(({ setter }, ref) => {
           url: "https://github.com/danialross/VibeVault-Backend",
           icon: faNode,
         },
-      ],
+    ]
     },
+    {
+      name: "The Agora",
+      img: AgoraImg,
+      url: "https://the-agora.vercel.app",
+      icon: faGlobe,
+      github: [
+        {
+          url: "https://github.com/danialross/Art-Gallery",
+          icon: faReact,
+        }
+      ],
+    }
   ];
 
   return (
@@ -66,7 +79,7 @@ const Works = forwardRef(({ setter }, ref) => {
                   Link
                   <a
                     href={item.url}
-                    className=" border-2 border-darkTone rounded-lg bg-white p-2"
+                    className=" border-2 border-darkTone rounded-lg bg-white p-2   duration-200 ease-in-out hover:bg-darkTone hover:text-white"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -85,7 +98,7 @@ const Works = forwardRef(({ setter }, ref) => {
                     <a
                       key={index}
                       href={link.url}
-                      className=" border-2 border-darkTone rounded-lg bg-white p-2"
+                      className=" border-2 border-darkTone rounded-lg bg-white p-2 transition-colors duration-200 ease-in-out hover:bg-darkTone hover:text-white"
                       target="_blank"
                       rel="noopener noreferrer"
                     >

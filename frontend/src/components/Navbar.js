@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCloudArrowDown } from "@fortawesome/free-solid-svg-icons";
-import { useState, useRef, useEffect, useCallback } from "react";
+import { useState, useRef, useEffect } from "react";
 import axios from "axios";
 
 function Navbar({ sectionInfo, children }) {
