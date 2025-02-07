@@ -1,7 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCloudArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { useState, useRef, useEffect } from "react";
-import axios from "axios";
 
 function Navbar({ sectionInfo, children }) {
   const navRef = useRef(null);
@@ -52,30 +51,6 @@ function Navbar({ sectionInfo, children }) {
       left: 0,
       behavior: "smooth",
     });
-  };
-
-  const fetchResume = async () => {
-    try {
-      const response = await axios.get(
-        "https://danialross-backend.vercel.app/get-resume/Danial_Ross_Resume.pdf",
-        { responseType: "blob" }
-      );
-
-      const pdfBlob = new Blob([response.data], { type: "application/pdf" });
-
-      const fileUrl = URL.createObjectURL(pdfBlob);
-
-      const link = document.createElement("a");
-      link.href = fileUrl;
-      link.setAttribute("download", "Danial_Ross_Resume.pdf");
-      document.body.appendChild(link);
-      link.click();
-
-      URL.revokeObjectURL(link.href);
-      link.parentNode.removeChild(link);
-    } catch (error) {
-      console.error("Error downloading the PDF: ", error);
-    }
   };
 
   return (
@@ -152,13 +127,13 @@ function Navbar({ sectionInfo, children }) {
                     </button>
                   );
                 })}
-                <button
+                <a
+                  href={"/Danial_Ross_Resume.pdf"} download="Danial_Ross_Resume.pdf"
                   className="text-darkTone opacity-100 duration-200 hover:opacity-50"
-                  onClick={fetchResume}
                 >
                   <FontAwesomeIcon className="px-2" icon={faCloudArrowDown} />
                   Resume
-                </button>
+                </a>
               </li>
             </ul>
           </div>
