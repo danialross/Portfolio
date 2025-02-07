@@ -1,6 +1,6 @@
 import keyboard from '../assets/keyboard.jpg'
 import { forwardRef, useEffect } from 'react'
-
+// eslint-disable-next-line react/prop-types,react/display-name
 const AboutMe = forwardRef(({ setter }, ref) => {
     useEffect(() => {
         const handleResize = () => setter(ref.current.offsetHeight)

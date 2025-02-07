@@ -12,6 +12,7 @@ import nextjs from "../assets/nextjs.png";
 import typescript from "../assets/typescript.svg";
 import { forwardRef, useEffect } from "react";
 
+// eslint-disable-next-line react/prop-types,react/display-name
 const TechStack = forwardRef(({ setter }, ref) => {
   useEffect(() => {
     const handleResize = () => setter(ref.current.offsetHeight);

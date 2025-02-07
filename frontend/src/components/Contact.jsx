@@ -2,9 +2,10 @@ import { faPhone, faEnvelope, faCopy } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 import { useEffect, forwardRef } from "react";
-import DisplayButton from "./DisplayButton";
-import Link from "./Link";
+import DisplayButton from "./DisplayButton.jsx";
+import Link from "./Link.jsx";
 
+// eslint-disable-next-line react/prop-types,react/display-name
 const Contact = forwardRef(({ setter }, ref) => {
   useEffect(() => {
     const handleResize = () => setter(ref.current.offsetHeight);
@@ -40,7 +41,7 @@ const Contact = forwardRef(({ setter }, ref) => {
   ];
 
   return (
-    <div ref={ref} className="py-padY">
+    <div ref={ref} className="py-padY bg-lightTone ">
       <div className="max-w-screen-lg mx-auto flex flex-col items-center ">
         <div className="font-racing text-5xl pb-4 text-darkTone">
           Get in Touch

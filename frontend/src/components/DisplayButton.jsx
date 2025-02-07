@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+// eslint-disable-next-line react/prop-types
 function DisplayButton({ icon, text, value, size, copy }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isAlerting, setIsAlerting] = useState(false);
@@ -23,7 +24,7 @@ function DisplayButton({ icon, text, value, size, copy }) {
 
   return (
     <button
-      className={`h-20 p-[1.4rem] hover:bg-darkTone hover:text-white flex justify-start items-center justify border-darkTone border-2 rounded-xl  transition-all duration-300 ease-in-out  ${
+      className={`h-20 p-[1.4rem] ${isExpanded?"bg-darkTone":"bg-white"} hover:bg-darkTone focus:outline-none  hover:text-white flex justify-start items-center justify border-darkTone border-2 rounded-xl  transition-all duration-300 ease-in-out  ${
         isExpanded
           ? "max-w-full bg-darkTone text-white"
           : "max-w-20 bg-none text-darkTone"

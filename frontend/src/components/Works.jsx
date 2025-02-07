@@ -6,6 +6,7 @@ import PortfolioImg from "../assets/Portfolio.png";
 import VibeVaultImg from "../assets/VibeVault.png";
 import AgoraImg from "../assets/theAgora.png";
 
+// eslint-disable-next-line react/prop-types,react/display-name
 const Works = forwardRef(({ setter }, ref) => {
   useEffect(() => {
     const handleResize = () => setter(ref.current.offsetHeight);
@@ -49,7 +50,7 @@ const Works = forwardRef(({ setter }, ref) => {
       github: [
         {
           url: "https://github.com/danialross/Art-Gallery",
-          icon: faReact,
+          icon: faGithub,
         }
       ],
     }
@@ -79,7 +80,7 @@ const Works = forwardRef(({ setter }, ref) => {
                   Link
                   <a
                     href={item.url}
-                    className=" border-2 border-darkTone rounded-lg bg-white p-2   duration-200 ease-in-out hover:bg-darkTone hover:text-white"
+                    className=" border-2 text-darkTone border-darkTone rounded-lg bg-white p-2   duration-200 ease-in-out hover:bg-darkTone hover:text-white"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -98,7 +99,7 @@ const Works = forwardRef(({ setter }, ref) => {
                     <a
                       key={index}
                       href={link.url}
-                      className=" border-2 border-darkTone rounded-lg bg-white p-2 transition-colors duration-200 ease-in-out hover:bg-darkTone hover:text-white"
+                      className=" border-2 text-darkTone border-darkTone rounded-lg bg-white p-2 transition-colors duration-200 ease-in-out hover:bg-darkTone hover:text-white"
                       target="_blank"
                       rel="noopener noreferrer"
                     >

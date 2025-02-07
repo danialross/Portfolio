@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCloudArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { useState, useRef, useEffect } from "react";
 
+// eslint-disable-next-line react/prop-types
 function Navbar({ sectionInfo, children }) {
   const navRef = useRef(null);
   const buttonRef = useRef(null);
@@ -41,6 +42,7 @@ function Navbar({ sectionInfo, children }) {
   const scrollTo = (index) => {
     let height = 0;
     for (let i = 0; i < index; i++) {
+      // eslint-disable-next-line react/prop-types
       height += sectionInfo[i].ref.current.offsetHeight;
     }
 
@@ -54,21 +56,20 @@ function Navbar({ sectionInfo, children }) {
   };
 
   return (
-    <div className="w-full overflow-x-hidden">
-      <nav className={`fixed w-full bg-lightTone  z-50`} ref={navRef}>
-        <div className=" max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <div className="w-screen overflow-x-hidden">
+      <nav className={`fixed w-full bg-lightTone z-50`} ref={navRef}>
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
           <button
-            className="text-darkTone font-racing self-center text-4xl whitespace-nowrap opacity-100 hover:opacity-50 animation-opacity duration-200 pl-6"
+            className="text-darkTone font-racing self-center text-4xl whitespace-nowrap opacity-100 hover:opacity-50 animation-opacity duration-200 pl-6 bg-lightTone"
             onClick={() => scrollTo(0)}
           >
             Danial Ross
           </button>
-
           <button
             ref={buttonRef}
             onClick={toggleDropDown}
             type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 bg-lightTone rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200"
             aria-controls="navbar-solid-bg"
             aria-expanded="false"
           >
@@ -92,9 +93,9 @@ function Navbar({ sectionInfo, children }) {
 
           <div
             className={`${
-              isShowDropDown ? `-translate-x-4` : `translate-x-full-vw`
+              isShowDropDown ? `-translate-x-2` : `translate-x-full-vw`
             } 
-            w-full block absolute ${opacity} md:opacity-100 translate-y-36 md:block md:static md:translate-x-0 md:translate-y-0 md:w-auto transition-transform duration-100`}
+            block absolute ${opacity} bg-lightTone md:opacity-100 translate-y-36 md:block md:static md:translate-x-0 md:translate-y-0 md:w-auto transition-transform duration-100  w-full`}
             id="navbar-solid-bg"
             //hide dropdown when not active
             onTransitionEnd={() => {
@@ -104,17 +105,18 @@ function Navbar({ sectionInfo, children }) {
             }}
           >
             <ul
-              className="font-medium mt-4 rounded-xl bg-lightTone md:flex-row md:mt-0 p-6"
+              className="font-medium  rounded-xl bg-lightTone md:flex-row md:mt-0"
               ref={dropDownRef}
             >
-              <li className="flex flex-col items-center md:flex-row text-darkTone gap-6 lg:gap-14 ">
+              <li className="flex flex-col items-center md:flex-row text-darkTone gap-6 lg:gap-14 p">
+                {/* eslint-disable-next-line react/prop-types */}
                 {sectionInfo.map((item, index) => {
                   if (index === 0) {
                     return null;
                   }
                   return (
                     <button
-                      className="opacity-100 duration-200 hover:opacity-50"
+                      className="opacity-100 duration-200 hover:opacity-50 bg-lightTone  "
                       onClick={() => {
                         if (isShowDropDown) {
                           setIsShowDropDown(false);
@@ -129,7 +131,7 @@ function Navbar({ sectionInfo, children }) {
                 })}
                 <a
                   href={"/Danial_Ross_Resume.pdf"} download="Danial_Ross_Resume.pdf"
-                  className="text-darkTone opacity-100 duration-200 hover:opacity-50"
+                  className="text-darkTone opacity-100 duration-200 hover:opacity-50 p-4 "
                 >
                   <FontAwesomeIcon className="px-2" icon={faCloudArrowDown} />
                   Resume
