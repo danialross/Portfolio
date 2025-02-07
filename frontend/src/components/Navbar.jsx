@@ -58,9 +58,9 @@ function Navbar({ sectionInfo, children }) {
   return (
     <div className="w-screen overflow-x-hidden">
       <nav className={`fixed w-full bg-lightTone z-50`} ref={navRef}>
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2 focus:outline-none hover:outline-none">
           <button
-            className="text-darkTone font-racing self-center text-4xl whitespace-nowrap opacity-100 hover:opacity-50 animation-opacity duration-200 pl-6 bg-lightTone"
+            className="text-darkTone font-racing self-center text-4xl whitespace-nowrap opacity-100 focus:outline-none  hover:opacity-50 animation-opacity duration-200 pl-6 bg-lightTone "
             onClick={() => scrollTo(0)}
           >
             Danial Ross
@@ -108,7 +108,7 @@ function Navbar({ sectionInfo, children }) {
               className="font-medium  rounded-xl bg-lightTone md:flex-row md:mt-0"
               ref={dropDownRef}
             >
-              <li className="flex flex-col items-center md:flex-row text-darkTone gap-6 lg:gap-14 p">
+              <li className="flex flex-col items-center md:flex-row text-darkTone gap-6 lg:gap-14">
                 {/* eslint-disable-next-line react/prop-types */}
                 {sectionInfo.map((item, index) => {
                   if (index === 0) {
@@ -131,7 +131,7 @@ function Navbar({ sectionInfo, children }) {
                 })}
                 <a
                   href={"/Danial_Ross_Resume.pdf"} download="Danial_Ross_Resume.pdf"
-                  className="text-darkTone opacity-100 duration-200 hover:opacity-50 p-4 "
+                  className="text-darkTone opacity-100 duration-200 hover:opacity-50 p-4 hover:text-darkTone"
                 >
                   <FontAwesomeIcon className="px-2" icon={faCloudArrowDown} />
                   Resume
