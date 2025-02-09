@@ -27,22 +27,6 @@ const Works = forwardRef(({ setter }, ref) => {
       ],
     },
     {
-      name: "Vibe Vault",
-      img: VibeVaultImg,
-      url: "https://vibevaultmusic.vercel.app",
-      icon: faGlobe,
-      github: [
-        {
-          url: "https://github.com/danialross/VibeVault-Frontend",
-          icon: faReact,
-        },
-        {
-          url: "https://github.com/danialross/VibeVault-Backend",
-          icon: faNode,
-        },
-    ]
-    },
-    {
       name: "The Agora",
       img: AgoraImg,
       url: "https://the-agora.vercel.app",
