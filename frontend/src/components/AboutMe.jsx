@@ -27,31 +27,32 @@ const AboutMe = forwardRef(({ setter }, ref) => {
                     </div>
                     <div
                         className="lg:w-auto text-midTone text-md md:text-xl md:px-20 leading-8 md:leading-10 indent-12 px-4">
-                        I am a skilled
+                        I'm a
                         <span className="text-keyboardTone"> software developer </span>
-                        based in Kuala Lumpur, Malaysia, with specialization in
-                        <span className="text-keyboardTone"> Frontend </span>,
-                        <span className="text-keyboardTone"> Backend </span>
-                        , and
-                        <span className="text-keyboardTone"> Full-Stack </span>
-                        development. With a strong foundation in
+                        based in Kuala Lumpur, Malaysia, specializing in web development with a strong focus on
+                        <span className="text-keyboardTone"> frontend </span>,
+                        technologies. With a strong foundation in
                         <span className="text-keyboardTone"> Computer Science </span>
-                        , I have honed my skills by learning industry
-                        <span className="text-keyboardTone"> best practices </span>
-                        from experts in the field. I am passionate about
-                        leveraging my
+                        I’ve sharpened my skills by learning from industry experts and following
+                        <span className="text-keyboardTone"> best practices</span>.
+                        While my primary expertise lies in frontend development, I'm also experienced in the
+                        <span className="text-keyboardTone"> backend </span>
+                        , allowing me to contribute across the full stack when needed. I am passionate about leveraging my
                         <span className="text-keyboardTone"> technical abilities </span>
                         to
-                        <span className="text-keyboardTone"> create impactful solutions </span>
+                        <span className="text-keyboardTone"> impactful, </span>
+                        <span className="text-keyboardTone"> user-centered solutions </span>
                         and thrive in
                         <span className="text-keyboardTone"> collaborative environments </span>
                         . Always eager to
+                        <span className="text-keyboardTone"> learn </span>
+                        and
                         <span className="text-keyboardTone"> innovate </span>
-                        , I am committed to contributing to
-                        <span className="text-keyboardTone"> meaningful projects </span>
-                        and continuing my
-                        <span className="text-keyboardTone"> professional growth </span>
-                        to make a tangible impact through technology.
+                        , I am committed to
+                        <span className="text-keyboardTone"> growing my craft </span>
+                        and making a
+                        <span className="text-keyboardTone"> meaningful impact </span>
+                        through technology.
                     </div>
                 </div>
             </div>

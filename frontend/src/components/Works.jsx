@@ -1,9 +1,9 @@
 import { forwardRef, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGlobe } from "@fortawesome/free-solid-svg-icons";
-import { faGithub, faNode, faReact } from "@fortawesome/free-brands-svg-icons";
+import {faGlobe} from "@fortawesome/free-solid-svg-icons";
+import {faGithub} from "@fortawesome/free-brands-svg-icons";
 import PortfolioImg from "../assets/Portfolio.png";
-import VibeVaultImg from "../assets/VibeVault.png";
+import StradaImg from "../assets/Strada.png";
 import AgoraImg from "../assets/theAgora.png";
 
 // eslint-disable-next-line react/prop-types,react/display-name
@@ -34,6 +34,18 @@ const Works = forwardRef(({ setter }, ref) => {
       github: [
         {
           url: "https://github.com/danialross/Art-Gallery",
+          icon: faGithub,
+        }
+      ],
+    },
+    {
+      name: "Strada",
+      img: StradaImg,
+      url: "https://stradamotors.vercel.app",
+      icon: faGlobe,
+      github: [
+        {
+          url: "https://github.com/danialross/Strada",
           icon: faGithub,
         }
       ],
