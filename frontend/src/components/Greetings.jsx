@@ -37,7 +37,7 @@ const Greetings = forwardRef(({ setter }, ref) => {
         <div className="text-2xl md:text-3xl text-midTone">
           I'm Danial Ross.
         </div>
-        <div className="text-3xl md:text-5xl">Web Developer.</div>
+        <div className="text-3xl md:text-5xl text-keyboardTone">Web Developer.</div>
         <div className="flex justify-center w-full p-8 gap-10">
           {buttonsData.map((item, index) => {
             return (
