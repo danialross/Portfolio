@@ -60,7 +60,7 @@ function Navbar({ sectionInfo, children }) {
       <nav className={`fixed w-full bg-lightTone z-50`} ref={navRef}>
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2 focus:outline-none hover:outline-none">
           <button
-            className="text-darkTone font-racing self-center text-4xl whitespace-nowrap opacity-100 focus:outline-none  hover:opacity-50 animation-opacity duration-200 pl-6 bg-lightTone "
+            className="text-darkTone font-racing self-center text-4xl whitespace-nowrap opacity-100 focus:outline-none  hover:opacity-50 transition-opacity duration-200 pl-6 bg-lightTone"
             onClick={() => scrollTo(0)}
           >
             Danial Ross
@@ -116,7 +116,7 @@ function Navbar({ sectionInfo, children }) {
                   }
                   return (
                     <button
-                      className="opacity-100 duration-200 hover:opacity-50 bg-lightTone  "
+                      className="opacity-100 duration-200 hover:opacity-50 bg-lightTone  transition-opacity"
                       onClick={() => {
                         if (isShowDropDown) {
                           setIsShowDropDown(false);

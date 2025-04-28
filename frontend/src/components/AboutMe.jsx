@@ -33,26 +33,26 @@ const AboutMe = forwardRef(({ setter }, ref) => {
                         <span className="text-keyboardTone"> frontend </span>,
                         technologies. With a strong foundation in
                         <span className="text-keyboardTone"> Computer Science </span>
-                        I’ve sharpened my skills by learning from industry experts and following
+                        I’ve sharpened my skills by
+                        <span className="text-keyboardTone"> learning from industry experts </span>
+                        and following
                         <span className="text-keyboardTone"> best practices</span>.
                         While my primary expertise lies in frontend development, I'm also experienced in the
                         <span className="text-keyboardTone"> backend </span>
                         , allowing me to contribute across the full stack when needed. I am passionate about leveraging my
                         <span className="text-keyboardTone"> technical abilities </span>
-                        to
-                        <span className="text-keyboardTone"> impactful, </span>
-                        <span className="text-keyboardTone"> user-centered solutions </span>
-                        and thrive in
-                        <span className="text-keyboardTone"> collaborative environments </span>
-                        . Always eager to
-                        <span className="text-keyboardTone"> learn </span>
+                        to create
+                        <span className="text-keyboardTone"> impactful </span>
                         and
-                        <span className="text-keyboardTone"> innovate </span>
-                        , I am committed to
-                        <span className="text-keyboardTone"> growing my craft </span>
-                        and making a
-                        <span className="text-keyboardTone"> meaningful impact </span>
-                        through technology.
+                        <span className="text-keyboardTone"> user-centered </span>
+                        solutions. I thrive in
+                        <span className="text-keyboardTone"> collaborative environments </span>
+                        that encourage
+                        <span className="text-keyboardTone"> idea-sharing </span>
+                        and
+                        <span className="text-keyboardTone"> teamwork </span>
+                        to deliver solutions that meet
+                        <span className="text-keyboardTone"> user needs</span>.
                     </div>
                 </div>
             </div>
