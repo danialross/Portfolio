@@ -31,7 +31,7 @@ const AboutMe = forwardRef(({ setter }, ref) => {
                         <span className="text-keyboardTone"> software developer </span>
                         based in Kuala Lumpur, Malaysia, specializing in web development with a strong focus on
                         <span className="text-keyboardTone"> frontend </span>,
-                        technologies. With a strong foundation in
+                        technologies. With a solid foundation in
                         <span className="text-keyboardTone"> Computer Science </span>
                         I’ve sharpened my skills by
                         <span className="text-keyboardTone"> learning from industry experts </span>
