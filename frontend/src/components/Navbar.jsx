@@ -56,9 +56,9 @@ function Navbar({ sectionInfo, children }) {
   };
 
   return (
-    <div className="w-screen overflow-x-hidden">
-      <nav className={`fixed w-full bg-lightTone z-50`} ref={navRef}>
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2 focus:outline-none hover:outline-none">
+    <div className="w-screen min-w-[300px] overflow-x-hidden">
+      <nav className={`fixed w-full  bg-lightTone z-50`} ref={navRef}>
+        <div className="max-w-screen-xl h-24 min-w-[300px] w-full flex flex-row items-center justify-between mx-auto px-4 focus:outline-none hover:outline-none">
           <button
             className="text-darkTone font-racing self-center text-4xl whitespace-nowrap opacity-100 focus:outline-none  hover:opacity-50 transition-opacity duration-200 pl-6 bg-lightTone"
             onClick={() => scrollTo(0)}
@@ -95,7 +95,7 @@ function Navbar({ sectionInfo, children }) {
             className={`${
               isShowDropDown ? `-translate-x-2` : `translate-x-full-vw`
             } 
-            block absolute ${opacity} bg-lightTone md:opacity-100 translate-y-36 md:block md:static md:translate-x-0 md:translate-y-0 md:w-auto transition-transform duration-100  w-full`}
+            block absolute ${opacity} bg-lightTone md:opacity-100 translate-y-[180px] md:block md:static md:translate-x-0 md:translate-y-0 md:w-auto transition-transform duration-100  w-full`}
             id="navbar-solid-bg"
             //hide dropdown when not active
             onTransitionEnd={() => {
@@ -105,10 +105,10 @@ function Navbar({ sectionInfo, children }) {
             }}
           >
             <ul
-              className="font-medium  rounded-xl bg-lightTone md:flex-row md:mt-0"
+              className="font-medium  rounded-xl bg-lightTone"
               ref={dropDownRef}
             >
-              <li className="flex flex-col items-center md:flex-row text-darkTone gap-6 lg:gap-14">
+              <li className="flex flex-col items-center md:flex-row text-darkTone  lg:gap-6">
                 {/* eslint-disable-next-line react/prop-types */}
                 {sectionInfo.map((item, index) => {
                   if (index === 0) {
@@ -116,7 +116,7 @@ function Navbar({ sectionInfo, children }) {
                   }
                   return (
                     <button
-                      className="opacity-100 duration-200 hover:opacity-50 bg-lightTone  transition-opacity"
+                      className="opacity-100 duration-200 hover:opacity-50 bg-lightTone  transition-opacity p-4 lg:p-8"
                       onClick={() => {
                         if (isShowDropDown) {
                           setIsShowDropDown(false);
@@ -131,7 +131,7 @@ function Navbar({ sectionInfo, children }) {
                 })}
                 <a
                   href={"/Danial_Ross_Resume.pdf"} download="Danial_Ross_Resume.pdf"
-                  className="text-darkTone opacity-100 duration-200 hover:opacity-50 p-4 hover:text-darkTone"
+                  className="text-darkTone opacity-100 duration-200 hover:opacity-50 hover:text-darkTone p-4 pb-8 md:pb-4"
                 >
                   <FontAwesomeIcon className="px-2" icon={faCloudArrowDown} />
                   Resume
