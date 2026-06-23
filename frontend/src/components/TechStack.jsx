@@ -5,11 +5,11 @@ import nodeJs from "../assets/nodejs.png";
 import react from "../assets/react.png";
 import tailwind from "../assets/tailwind.svg";
 import mongodb from "../assets/mongodb.png";
-import mysql from "../assets/mysql.png";
+import postgresql from "../assets/postgresql.png";
 import docker from "../assets/docker.png";
-import nestjs from "../assets/nestjs.svg";
-import nextjs from "../assets/nextjs.png";
 import typescript from "../assets/typescript.svg";
+import springboot from "../assets/springboot.png";
+import java from "../assets/java.png";
 import { forwardRef, useEffect } from "react";
 
 // eslint-disable-next-line react/prop-types,react/display-name
@@ -27,12 +27,12 @@ const TechStack = forwardRef(({ setter }, ref) => {
     { name: "Javascript", icon: js },
     { name: "Typescript", icon: typescript },
     { name: "React", icon: react },
-    { name: "Next.JS", icon: nextjs },
+    { name: "Java", icon: java },
+    { name: "Springboot", icon: springboot },
     { name: "Node.JS", icon: nodeJs },
-    { name: "Nest.JS", icon: nestjs },
     { name: "TailwindCSS", icon: tailwind },
     { name: "MongoDB", icon: mongodb },
-    { name: "MySQL", icon: mysql },
+    { name: "PostgreSQL", icon: postgresql },
     { name: "Docker", icon: docker },
   ];
 
